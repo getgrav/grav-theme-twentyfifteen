@@ -1,0 +1,17 @@
+name: TwentyFifteen
+version: 1.0.0
+description: "Twenty Fifteen is a default, most popular in 2015, Wordpress theme ported to Grav !"
+icon: group
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-twentyfifteen
+demo: http://demo.getgrav.org/twentyfifteen-skeleton
+keywords: twentyfifteen, wordpress, theme, modern, fast, responsive, html5, css3, blog
+bugs: https://github.com/getgrav/grav-theme-twentyfifteen/issues
+license: GPLv2 (or later)
+
+form:
+  validation: strict
+  fields:
