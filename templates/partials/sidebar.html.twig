@@ -1,73 +1,50 @@
 <div id="sidebar" class="sidebar">
-<h1 id="logo"></h1>
-
-<header id="masthead" class="site-header" role="banner">
-<div class="site-branding">
-    <h1 class="site-title"><a href="{{ base_url_absolute }}">{{ site.title|upper }}</a></h1>
-    <p class="site-description">{{ site.description }}</p>
-    <button class="secondary-toggle">Menu and widgets</button>
-</div>
-</header>
-
-{% include 'partials/navigation.html.twig' %}
-
-{% if config.plugins.simplesearch.enabled %}
-<section class="box search">
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
-</section>
-{% endif %}
-{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-<section class="box recent-comments">
-    <header>
-        <h2>Related Posts</h2>
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <h1 class="site-title"><a href="{{ base_url_absolute }}">{{ site.title|upper }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+            <button class="secondary-toggle">Menu and widgets</button>
+        </div>
     </header>
-    {% include 'partials/relatedpages.html.twig' %}
-</section>
-{% endif %}
-{% if config.plugins.random.enabled %}
-<section class="box text-style1">
-    <div class="inner">
-        <header>
-            <h2>Random Article</h2>
-        </header>
-        <a href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
+    <div id="secondary" class="secondary">
+        <div id="widget-area" class="widget-area" role="complementary">
+            {% include 'partials/navigation.html.twig' %}
+            {% if config.plugins.simplesearch.enabled %}
+                <aside class="widget search">
+                    {% include 'partials/simplesearch_searchbox.html.twig' %}
+                </aside>
+            {% endif %}
+            {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+                <aside class="widget recent-comments">
+                    <h2 class="widget-title">Related Posts</h2>
+                    {% include 'partials/relatedpages.html.twig' %}
+                </aside>
+            {% endif %}
+            {% if config.plugins.random.enabled %}
+                <aside class="widget text-style1">
+                    <h2 class="widget-title">Random Article</h2>
+                    <a href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
+                </aside>
+            {% endif %}
+            {% if config.plugins.archives.enabled %}
+                <aside class="widget widget_meta">
+                    <h2 class="widget-title">Archives</h2>
+                    {% include 'partials/archives.html.twig' %}
+                </aside>
+            {% endif %}
+            {% if config.plugins.taxonomylist.enabled %}
+                <aside class="widget recent-comments">
+                    <h2 class="widget-title">Popular Tags</h2>
+                    {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
+                </aside>
+            {% endif %}
+            {% if config.plugins.feed.enabled %}
+                <aside class="widget text-style1">
+                    <h2 class="widget-title">Syndicate</h2>
+                    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+                    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+                </aside>
+            {% endif %}
+        </div>
     </div>
-</section>
-{% endif %}
-{% if config.plugins.archives.enabled %}
-    <section class="box recent-posts">
-        <header>
-            <h2>Archives</h2>
-        </header>
-        {% include 'partials/archives.html.twig' %}
-    </section>
-{% endif %}
-
-{% if config.plugins.taxonomylist.enabled %}
-<section class="box recent-comments">
-    <header>
-        <h2>Popular Tags</h2>
-    </header>
-    {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
-</section>
-{% endif %}
-
-{% if site.calendar %}
-<section class="box calendar">
-    <div class="inner">
-        <div id="datepicker"></div>
-    </div>
-</section>
-{% endif %}
-
-{% if config.plugins.feed.enabled %}
-<section class="box text-style1">
-    <header>
-        <h2>Syndicate</h2>
-    </header>
-    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
-</section>
-{% endif %}
-
 </div>
