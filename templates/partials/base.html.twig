@@ -1,67 +1,59 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
     {% block head %}
         <meta charset="utf-8" />
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-
-        {% block javascripts %}
-            <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-            {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/skel.min.js') %}
-            {% do assets.addJs('theme://js/skel-layers.min.js') %}
-        {% endblock %}
-        {{ assets.js() }}
-
-        {% include 'partials/init.html.twig' %}
-
-         {% if site.calendar %}
-         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-         {% endif %}
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.ico') }}" />
 
         {% block stylesheets %}
-            {% do assets.addCss('theme://css/skel.css') %}
-            {% do assets.addCss('theme://css/style.css') %}
-            {% do assets.addCss('theme://css/style-desktop.css') %}
-            {% do assets.addCss('theme://css/style-wide.css') %}
-        {% endblock %}
-        <noscript>
-            {{ assets.css() }}
-        </noscript>
-        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+            <link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+            <link rel='stylesheet' id='genericons-css'  href='{{ url('theme://genericons/genericons.css') }}' type='text/css' media='all' /> 
+            <link rel='stylesheet' id='twentyfifteen-style-css'  href='{{ url('theme://css/style.css') }}' type='text/css' media='all' />
 
-        {% if site.calendar %}
-        <script type="text/javascript">
-         $(function() {
-            $( "#datepicker" ).datepicker({
-                hideIfNoPrevNext: true
-            });
-        });
-        </script>
-        {% endif %}
-        
-        {% endblock head%}
-    </head>
-    <body class="{{ site.sidebar_position }}-sidebar">
-        <div id="wrapper">
+            <!--[if lt IE 9]>
+            <link rel='stylesheet' id='twentyfifteen-ie-css'  href='{{ url('theme://css/ie.css') }}' type='text/css' media='all' />
+            <![endif]-->
+            <!--[if lt IE 8]>
+            <link rel='stylesheet' id='twentyfifteen-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
+            <![endif]-->
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body class="home blog">
+    <div id="page" class="hfeed site">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
         {% block body %}
-            <div id="content">
-                <div class="inner">
+            <div id="content" class="site-content">
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main" role="main">
                     {% block content %}{% endblock %}
+                    </main>
+                    </div>
                 </div>
-            </div>
-        {% endblock %}
-        {% block sidebar %}
-            {% include 'partials/sidebar.html.twig' %}
-        {% endblock %}
+            {% endblock %}
+            {% block sidebar %}
+                {% include 'partials/sidebar.html.twig' %}
+            {% endblock %}
 
         </div>
 
+
+        {% block javascripts %}
+            <script type='text/javascript'>
+            /* <![CDATA[ */
+            var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+            /* ]]> */
+            </script>
+            <!--[if lte IE 8]>{% do assets.addJs('theme://js/html5.js') %}<![endif]-->
+            {% do assets.add('jquery',101) %}
+            {% do assets.addJs('theme://js/functions.js') %}
+            {% do assets.addJs('theme://js/skip-link-focus-fix.js') %}
+        {% endblock %}
+        {{ assets.js() }}
+
     </body>
-</html>
+    </html>
