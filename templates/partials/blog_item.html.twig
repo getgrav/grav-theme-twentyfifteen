@@ -44,7 +44,7 @@
 
     <footer class="entry-footer">
         <span class="posted-on">
-            <time class="month">{{ page.date|date() }}</time> 
+            <time class="entry-date published updated" datetime="{{ page.date|date('Y-m-d') }}">{{ page.date|date() }}</time> 
         </span>
         {% if page.header.author %}
             <span class="byline">

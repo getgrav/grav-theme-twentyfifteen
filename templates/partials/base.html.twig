@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width">
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.ico') }}" />
 
         {% block stylesheets %}
@@ -20,27 +20,6 @@
             <link rel='stylesheet' id='twentyfifteen-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
             <![endif]-->
         {% endblock %}
-    {% endblock %}
-</head>
-
-<body class="home blog">
-    <div id="page" class="hfeed site">
-        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-        {% block body %}
-            <div id="content" class="site-content">
-                <div id="primary" class="content-area">
-                    <main id="main" class="site-main" role="main">
-                    {% block content %}{% endblock %}
-                    </main>
-                    </div>
-                </div>
-            {% endblock %}
-            {% block sidebar %}
-                {% include 'partials/sidebar.html.twig' %}
-            {% endblock %}
-
-        </div>
-
 
         {% block javascripts %}
             <script type='text/javascript'>
@@ -55,5 +34,30 @@
         {% endblock %}
         {{ assets.js() }}
 
-    </body>
-    </html>
+    {% endblock %}
+</head>
+
+<body class="home blog">
+    <div id="page" class="hfeed site">
+    {% block sidebar %}
+        {% include 'partials/sidebar.html.twig' %}
+    {% endblock %}
+    {% block body %}
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    {% block content %}
+                    {% endblock %}
+                </main>
+            </div>
+        </div>
+    {% endblock %}
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info">
+            <a href="https://getgrav.org/">Proudly powered by GRAV</a>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

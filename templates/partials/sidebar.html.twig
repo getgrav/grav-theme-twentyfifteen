@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar">
+<div id="sidebar" class="sidebar" >
     <header id="masthead" class="site-header" role="banner">
         <div class="site-branding">
             <h1 class="site-title"><a href="{{ base_url_absolute }}">{{ site.title|upper }}</a></h1>
@@ -15,7 +15,7 @@
                 </aside>
             {% endif %}
             {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-                <aside class="widget recent-comments">
+                <aside class="widget widget_meta">
                     <h2 class="widget-title">Related Posts</h2>
                     {% include 'partials/relatedpages.html.twig' %}
                 </aside>
@@ -33,7 +33,7 @@
                 </aside>
             {% endif %}
             {% if config.plugins.taxonomylist.enabled %}
-                <aside class="widget recent-comments">
+                <aside class="widget widget_meta">
                     <h2 class="widget-title">Popular Tags</h2>
                     {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
                 </aside>
