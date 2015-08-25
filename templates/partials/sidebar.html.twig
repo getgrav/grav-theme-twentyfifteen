@@ -39,10 +39,12 @@
                 </aside>
             {% endif %}
             {% if config.plugins.feed.enabled %}
-                <aside class="widget text-style1">
+                <aside class="widget widget_meta">
                     <h2 class="widget-title">Syndicate</h2>
-                    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-                    <a class="button" style="padding-right: 1em;padding-left: 1em;" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+                    <ul>
+                        <li><a class="button" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a></li>
+                        <li><a class="button" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a></li>
+                    </ul>
                 </aside>
             {% endif %}
         </div>
