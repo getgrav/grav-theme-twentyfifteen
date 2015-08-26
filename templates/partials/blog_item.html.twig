@@ -34,6 +34,36 @@
             {% set show_prev_next = true %}
         {% endif %}
     </div>
+    
+    {% if not truncate %}
+        {% if page.header.author %}
+            <div class="author-info">
+                <h2 class="author-heading">
+                    Published by
+                </h2>
+                <div class="author-avatar">
+                    {% if page.header.avatar %}
+                        {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
+                    {% endif %}
+
+                    {% if page.header.author or page.header.author_bio %}
+                        <div class="author-description">
+                         {% if page.header.author %}
+                            <h3 class="author-title">
+                                {{ page.header.author }}
+                            </h3>
+                        {% endif %}
+                        {% if page.header.author_bio %}
+                            <p class="author-bio">
+                               {{ page.header.author_bio }}
+                           </p>
+                       {% endif %}
+                   </div>
+               {% endif %}
+           </div>
+       {% endif %}
+       </div>
+   {% endif %}
 
     <footer class="entry-footer">
         <span class="posted-on">
@@ -57,7 +87,6 @@
 </article>
 
 {% if show_prev_next %}
-
 {% if page.nextSibling.media.images %}
 <style type="text/css">
 .post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
