@@ -1,8 +1,8 @@
 {% if fields | length > 1 %}
-    <form name="simple_form" id="simple_form" action="https://getsimpleform.com/messages?form_api_token={{ token }}" enctype="multipart/form-data" method="post">
+    <form name="simple_form" id="simple_form" class="comment-form" action="https://getsimpleform.com/messages?form_api_token={{ token }}" enctype="multipart/form-data" method="post">
 
         {% for key, field in fields %}
-            <div id="simple_form-{{ key }}">
+            <p id="simple_form-{{ key }}">
                 {% if field.type not in ['hidden', 'submit'] %}
                     <label for="simple_form-field-{{ key }}">{{ field.title }}</label>
                 {% endif %}
@@ -29,7 +29,7 @@
                 {% else %}
                     <input type="text" id="simple_form-field-{{ key }}" name="{{ key }}" class="{{ field.class }}" placeholder="{{ field.placeholder }}" value="{{ field.default }}" {% if field.required %}required="required"{% endif %} />
                 {% endif %}
-            </div>
+            </p>
         {% endfor %}
 
         <div id="simple_form-success"></div>
