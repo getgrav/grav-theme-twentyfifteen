@@ -1,28 +1,22 @@
 {% if pagination|length > 1 %}
 
-<div class="pagination">
-    <div class="pages">
+<div class="navigation pagination">
+    <div class="nav-links">
     {% if pagination.hasPrev %}
-        <a rel="prev" href="{{ base_url }}{{ pagination.params }}{{ pagination.prevUrl }}">&laquo;</a>
-    {% else %}
-        <span>&laquo;</span>
+        <a class="prev page-numbers" href="{{ base_url }}{{ pagination.params }}{{ pagination.prevUrl }}">&laquo;</a>
     {% endif %}
 
     {% for paginate in pagination %}
 
         {% if paginate.isCurrent %}
-            <span>{{ paginate.number }}</span>
+            <span class="current"><span class="meta-nav screen-reader-text">Page </span>{{ paginate.number }}</span>
         {% elseif paginate.isInDelta %}
-            <a href="{{ base_url }}{{ pagination.params }}{{ paginate.url }}">{{ paginate.number }}</a>
-        {% elseif paginate.isDeltaBorder %}
-            <li class="gap"><span>&hellip;</span>
+            <a class="page-numbers" href="{{ base_url }}{{ pagination.params }}{{ paginate.url }}"><span class="meta-nav screen-reader-text">Page </span>{{ paginate.number }}</a>
         {% endif %}
 
     {% endfor %}
     {% if pagination.hasNext %}
-        <a rel="next" href="{{ base_url }}{{ pagination.params }}{{ pagination.nextUrl }}">&raquo;</a>
-    {% else %}
-        <span>&raquo;</span>
+        <a class="next page-numbers" href="{{ base_url }}{{ pagination.params }}{{ pagination.nextUrl }}">&raquo;</a>
     {% endif %}
 </div>
 </div>
