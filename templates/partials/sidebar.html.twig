@@ -9,6 +9,9 @@
     <div id="secondary" class="secondary">
         <div id="widget-area" class="widget-area" role="complementary">
             {% include 'partials/navigation.html.twig' %}
+            {% if site.social %}
+                {% include 'partials/social.html.twig' %}
+            {% endif %}
             {% if config.plugins.simplesearch.enabled %}
                 <aside class="widget search">
                     {% include 'partials/simplesearch_searchbox.html.twig' %}
