@@ -21,18 +21,7 @@
             <![endif]-->
         {% endblock %}
 
-        {% block javascripts %}
-            <script type='text/javascript'>
-            /* <![CDATA[ */
-            var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
-            /* ]]> */
-            </script>
-            <!--[if lte IE 8]>{% do assets.addJs('theme://js/html5.js') %}<![endif]-->
-            {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/functions.js') %}
-            {% do assets.addJs('theme://js/skip-link-focus-fix.js') %}
-        {% endblock %}
-        {{ assets.js() }}
+
 
     {% endblock %}
 </head>
@@ -59,5 +48,21 @@
     </footer>
 
 </div>
+     {% block javascripts %}
+            <script type='text/javascript'>
+            /* <![CDATA[ */
+            var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+            /* ]]> */
+            </script>
+
+               <!--[if lte IE 8]><script type='text/javascript' src='{{ url('theme://js/html5.js') }}'></script><![endif]-->
+               <script type='text/javascript' src='{{ url('theme://js/html5.js') }}'></script>
+
+            {% do assets.add('jquery',101) %}
+            {% do assets.addJs('theme://js/jquery-migrate.min.js') %}
+            {% do assets.addJs('theme://js/functions.js') %}
+            {% do assets.addJs('theme://js/skip-link-focus-fix.js') %}
+        {% endblock %}
+        {{ assets.js() }}
 </body>
 </html>
