@@ -26,6 +26,12 @@
         {% endblock %}
         {{ assets.js() }}
 
+        {% block color_scheme %}
+            {% if site.current_preset %}
+                {% include 'partials/color_scheme.html.twig' %}
+            {% endif %}
+        {% endblock %}
+
     {% endblock %}
 </head>
 
