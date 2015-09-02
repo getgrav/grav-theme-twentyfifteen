@@ -9,9 +9,9 @@
     {% for paginate in pagination %}
 
         {% if paginate.isCurrent %}
-            <span class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>{{ paginate.number }}</span>
+            <span class="page-numbers current"><span class="meta-nav screen-reader-text">{{ 'PAGE'|t }} </span>{{ paginate.number }}</span>
         {% elseif paginate.isInDelta %}
-            <a class="page-numbers" href="{{ base_url }}{{ pagination.params }}{{ paginate.url }}"><span class="meta-nav screen-reader-text">Page </span>{{ paginate.number }}</a>
+            <a class="page-numbers" href="{{ base_url }}{{ pagination.params }}{{ paginate.url }}"><span class="meta-nav screen-reader-text">{{ 'PAGE'|t }} </span>{{ paginate.number }}</a>
         {% endif %}
 
     {% endfor %}
