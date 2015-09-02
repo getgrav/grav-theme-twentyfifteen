@@ -8,7 +8,6 @@
     </header>
     <div id="secondary" class="secondary">
         <div id="widget-area" class="widget-area" role="complementary">
-            
             {% include 'partials/navigation.html.twig' %}
             {% if site.social %}
                 {% include 'partials/social.html.twig' %}
@@ -20,31 +19,31 @@
             {% endif %}
             {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
                 <aside class="widget widget_meta">
-                    <h2 class="widget-title">Related Posts</h2>
+                    <h2 class="widget-title">{{ 'RELATED_POSTS'|t }}</h2>
                     {% include 'partials/relatedpages.html.twig' %}
                 </aside>
             {% endif %}
             {% if config.plugins.random.enabled %}
                 <aside class="widget text-style1">
-                    <h2 class="widget-title">Random Article</h2>
+                    <h2 class="widget-title">{{ 'RANDOM_ARTICLE'|t }}</h2>
                     <a href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
                 </aside>
             {% endif %}
             {% if config.plugins.archives.enabled %}
                 <aside class="widget widget_meta">
-                    <h2 class="widget-title">Archives</h2>
+                    <h2 class="widget-title">{{ 'ARCHIVES'|t }}</h2>
                     {% include 'partials/archives.html.twig' %}
                 </aside>
             {% endif %}
             {% if config.plugins.taxonomylist.enabled %}
                 <aside class="widget widget_meta">
-                    <h2 class="widget-title">Popular Tags</h2>
+                    <h2 class="widget-title">{{ 'POPULAR_TAGS'|t }}</h2>
                     {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
                 </aside>
             {% endif %}
             {% if config.plugins.feed.enabled %}
                 <aside class="widget widget_meta">
-                    <h2 class="widget-title">Syndicate</h2>
+                    <h2 class="widget-title">{{ 'SYNDICATE'|t }}</h2>
                     <ul>
                         <li><a class="button" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a></li>
                         <li><a class="button" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a></li>

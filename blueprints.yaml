@@ -11,6 +11,7 @@ demo: http://demo.getgrav.org/twentyfifteen-skeleton
 keywords: twentyfifteen, wordpress, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/getgrav/grav-theme-twentyfifteen/issues
 license: GPLv2 (or later)
+default_lang: en
 
 form:
   validation: strict
