@@ -1,7 +1,5 @@
 enabled: true
-color: blue
-dropdown:
-  enabled: false
+current_preset: default
 
 streams:
   scheme:
