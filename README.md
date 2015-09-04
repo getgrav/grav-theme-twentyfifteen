@@ -10,7 +10,14 @@ Twenty Fifteen by [WordPress.org](https://wordpress.org/themes/twentyfifteen/) i
 * Custom Colors
 * Custom Header
 * Social Links
-* Post Formats
+* Customizable options through admin interface
+* 5 Predefined Color Schemes
+* MultiLanguage support
+* Archives plugin support
+* Search plugin support
+* RelatedPages plugin support
+* TaxonomyList plugin support
+* Feeds
 * The GPL v2.0 or later license. :) Use it to make something cool.
 
 # Installation
