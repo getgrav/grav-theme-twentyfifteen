@@ -1,6 +1,6 @@
 name: TwentyFifteen
-version: 1.0.0
-description: "Twenty Fifteen is a default, most popular in 2015, Wordpress theme ported to Grav !"
+version: 1.0.2
+description: "Twenty Fifteen is a Grav adaptation of most popular 2015 Wordpress theme."
 icon: group
 author:
   name: Team Grav
