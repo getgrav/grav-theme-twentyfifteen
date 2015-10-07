@@ -67,7 +67,7 @@
 
     <footer class="entry-footer">
         <span class="posted-on">
-            <time class="entry-date published updated" datetime="{{ page.date|date('Y-m-d') }}">{{ 'MONTHS_OF_THE_YEAR'|ta(post.date|date('n') - 1) }} {{ page.date|date("m, Y") }}</time> 
+            <time class="entry-date published updated" datetime="{{ page.date|date('Y-m-d') }}">{{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} {{ page.date|date("d, Y") }}</time> 
         </span>
         {% if page.header.author %}
             <span class="byline">
