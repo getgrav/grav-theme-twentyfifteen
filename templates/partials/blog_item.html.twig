@@ -115,7 +115,7 @@
                 <a href="{{ page.nextSibling.url }}" rel="next">
                     <span class="meta-nav" aria-hidden="true" {% if page.nextSibling.media.images %}style="color: #fff;"{% endif %}>{{ 'NEXT'|t }}</span> 
                     <span class="screen-reader-text">{{ 'NEXT'|t }}</span> 
-                    <span class="post-title" {% if page.nextSibling.media.images %}style="color: #fff;"{% endif %}>{{ page.header.title }}</span>
+                    <span class="post-title" {% if page.nextSibling.media.images %}style="color: #fff;"{% endif %}>{{ page.nextSibling.header.title }}</span>
                 </a>
             </div>
         {% endif %}
