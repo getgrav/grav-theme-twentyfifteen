@@ -1,3 +1,11 @@
+# v1.0.4
+## 11/11/2015
+
+1. [](#bugfix)
+    * Blog item date fix
+    * Next/Prev fix
+    * SimpleForm replaced with Forms
+
 # v1.0.3
 ## 10/07/2015
 
