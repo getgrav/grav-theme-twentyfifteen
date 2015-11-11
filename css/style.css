@@ -630,6 +630,9 @@ input[type="radio"] {
 .widget .search-form input[type="submit"] {
 	padding: 0;
 }
+.form-field {
+  margin-bottom: 1.6em;
+}
 
 
 /**

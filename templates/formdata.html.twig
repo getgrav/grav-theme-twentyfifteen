@@ -1,13 +1,16 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-<article class="box post post-excerpt">
-  <header>
-    <h2>{{ form.message }}</h2>
+<article class="post-2 page type-page status-publish hentry">
+  <header class="entry-header">
+    <h1>{{ form.message }}</h1>
   </header>
-  <p>Here is the summary of what you wrote to us:</p>
+  <div class="entry-content">
+    <p>Here is the summary of what you wrote to us:</p>
 
-  {{ content }}
+    {{ content }}
 
-  {% include "forms/data.html.twig" %}
+    {% include "forms/data.html.twig" %}
+
+  </div>
 </article>
 {% endblock %}
