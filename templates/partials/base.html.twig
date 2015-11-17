@@ -21,6 +21,7 @@
             <link rel='stylesheet' id='twentyfifteen-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
             <![endif]-->
         {% endblock %}
+        {{ assets.css() }}
 
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
