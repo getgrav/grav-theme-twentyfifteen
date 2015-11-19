@@ -1,3 +1,9 @@
+# v1.0.5
+## 11/19/2015
+
+1. [](#bugfix)
+    * Plugins CSS loading bug
+
 # v1.0.4
 ## 11/11/2015
 
