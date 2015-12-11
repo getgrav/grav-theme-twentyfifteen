@@ -73,11 +73,20 @@ fi:
 fr:
   SITE:
     TITLE: Mon blogue
-    DESCRIPTION: Blogages sur ceci et cela
+    DESCRIPTION: Un blogue sur tout et rien
     COPYRIGHT: Tous droits réservés © %s Votre Entreprise
   SUBSCRIBE: Abonnez-vous
   MONTHS_OF_THE_YEAR: [Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
   DAYS_OF_THE_WEEK: [Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche]
+  READ_MORE: Continuer la lecture...
+  RANDOM_ARTICLE: Article aléatoire
+  RELATED_POSTS: Posts en relation
+  ARCHIVES: Archives
+  POPULAR_TAGS: Tags populaires
+  PUBLISHED_BY: Publié par
+  PREVIOUS: Précédent
+  NEXT: Suivant
+  PAGE: Page
 
 nl:
   SITE:
