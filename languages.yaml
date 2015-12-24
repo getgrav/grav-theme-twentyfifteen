@@ -58,7 +58,7 @@ it:
     DESCRIPTION: Blogging su questo e su quello
     COPYRIGHT: Tutti i diritti riservati © %s Società
   SUBSCRIBE: Abbonati
-  MONTHS_OF_THE_YEAR: [Gennaio, Febbraio, Marzo, Cprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+  MONTHS_OF_THE_YEAR: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
   DAYS_OF_THE_WEEK: [Lunedi, Martedi, Mercoledi, Giovedi, Venerdi, Sabato, Domenica]
 
 fi:
@@ -94,7 +94,7 @@ nl:
       DESCRIPTION: Bloggen over vanalles en nog wat
       COPYRIGHT: Copyright © %s Uw Bedrijf
   SUBSCRIBE: Abonneren
-  MONTHS_OF_THE_YEAR: [Januari, Februari, Maart, April, Mei Juni, Juli, Augustus, September, Oktober, November, December]
+  MONTHS_OF_THE_YEAR: [Januari, Februari, Maart, April, Mei, Juni, Juli, Augustus, September, Oktober, November, December]
   DAYS_OF_THE_WEEK: [Maandag, Dinsdag, Woensdag, Donderdag, Vrijdag, Zaterdag, Zondag]
 
 nb:
