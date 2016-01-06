@@ -1,4 +1,10 @@
-# v1.2.1
+# v1.0.7
+## 01/06/2016
+
+1. [](#bugfix)
+    * Minor language updates
+
+# v1.0.6
 ## 12/11/2015
 
 1. [](#bugfix)
