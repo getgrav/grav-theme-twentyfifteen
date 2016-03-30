@@ -5,20 +5,20 @@
 <div class="navigation pagination">
     <div class="nav-links">
     {% if pagination.hasPrev %}
-        <a class="prev page-numbers" href="{{ base_url }}{{ pagination.params }}{{ pagination.prevUrl }}">&laquo;</a>
+        {% set url = (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
+        <a class="prev page-numbers" href="{{ url }}">&laquo;</a>
     {% endif %}
-
     {% for paginate in pagination %}
-
         {% if paginate.isCurrent %}
             <span class="page-numbers current"><span class="meta-nav screen-reader-text">{{ 'PAGE'|t }} </span>{{ paginate.number }}</span>
         {% elseif paginate.isInDelta %}
-            <a class="page-numbers" href="{{ base_url }}{{ pagination.params }}{{ paginate.url }}"><span class="meta-nav screen-reader-text">{{ 'PAGE'|t }} </span>{{ paginate.number }}</a>
+            {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
+            <a class="page-numbers" href="{{ url }}"><span class="meta-nav screen-reader-text">{{ 'PAGE'|t }} </span>{{ paginate.number }}</a>
         {% endif %}
-
     {% endfor %}
     {% if pagination.hasNext %}
-        <a class="next page-numbers" href="{{ base_url }}{{ pagination.params }}{{ pagination.nextUrl }}">&raquo;</a>
+        {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+        <a class="next page-numbers" href="{{ url }}">&raquo;</a>
     {% endif %}
     </div>
 </div>
