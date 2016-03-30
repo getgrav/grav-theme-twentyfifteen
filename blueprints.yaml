@@ -11,19 +11,11 @@ demo: http://demo.getgrav.org/twentyfifteen-skeleton
 keywords: twentyfifteen, wordpress, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/getgrav/grav-theme-twentyfifteen/issues
 license: GPLv2 (or later)
-default_lang: en
 
 form:
   validation: loose
   fields:
 
-    default_lang:
-        type: text
-        size: small
-        label: Default lang
-        default: 'en'
-        validate:
-          type: text
     current_preset:
         type: select
         label: Color Scheme
