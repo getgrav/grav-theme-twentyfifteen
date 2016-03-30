@@ -1,5 +1,7 @@
 {% if pagination|length > 1 %}
-
+{% if base_url == '' %}
+    {% set base_url = '/' %}
+{% endif %}
 <div class="navigation pagination">
     <div class="nav-links">
     {% if pagination.hasPrev %}
@@ -18,7 +20,6 @@
     {% if pagination.hasNext %}
         <a class="next page-numbers" href="{{ base_url }}{{ pagination.params }}{{ pagination.nextUrl }}">&raquo;</a>
     {% endif %}
+    </div>
 </div>
-</div>
-
 {% endif %}
