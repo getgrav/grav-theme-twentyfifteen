@@ -45,25 +45,24 @@
                     {% if page.header.avatar %}
                         {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
                     {% endif %}
-
                     {% if page.header.author or page.header.author_bio %}
                         <div class="author-description">
-                         {% if page.header.author %}
-                            <h3 class="author-title">
-                                {{ page.header.author }}
-                            </h3>
-                        {% endif %}
-                        {% if page.header.author_bio %}
-                            <p class="author-bio">
-                               {{ page.header.author_bio }}
-                           </p>
-                       {% endif %}
-                   </div>
-               {% endif %}
-           </div>
-       {% endif %}
-       </div>
-   {% endif %}
+                            {% if page.header.author %}
+                                <h3 class="author-title">
+                                    {{ page.header.author }}
+                                </h3>
+                            {% endif %}
+                            {% if page.header.author_bio %}
+                                <p class="author-bio">
+                                    {{ page.header.author_bio }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
 
     <footer class="entry-footer">
         <span class="posted-on">
