@@ -1,3 +1,15 @@
+# v1.1.0
+## 07/14/2016
+
+1. [](#improved)
+    * Remove unneeded streams from Theme YAML
+    * Delete unused composer.json
+    * Add zh-cn / zh-hk / zh-tw language support
+1. [](#bugfix)
+    * Fix setting the page language in the html tag
+    * Fix pagination
+    * Fix layout problem on a blog post when the author is not defined
+    
 # v1.0.7
 ## 01/06/2016
 
