@@ -153,3 +153,58 @@ ru:
   SUBSCRIBE: Подписаться
   MONTHS_OF_THE_YEAR: [Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
   DAYS_OF_THE_WEEK: [Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье]
+
+zh-cn:
+  SITE:
+    TITLE: 我的博客
+    DESCRIPTION: 博客描述
+    COPYRIGHT: © 版权所有 %s 公司名称
+  SUBSCRIBE: 订阅
+  MONTHS_OF_THE_YEAR: [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+  DAYS_OF_THE_WEEK: [周一, 周二, 周三, 周四, 周五, 周六, 周日]
+  READ_MORE: 继续阅读...
+  RANDOM_ARTICLE: 随机文章
+  RELATED_POSTS: 相关文章
+  ARCHIVES: 归档
+  POPULAR_TAGS: 热门标签
+  PUBLISHED_BY: 发布者
+  PREVIOUS: 上一篇
+  NEXT: 下一篇
+  PAGE: 页
+
+zh-hk:
+  SITE:
+    TITLE: 我的網誌
+    DESCRIPTION: 網誌描述
+    COPYRIGHT: © 版權所有 %s 公司名稱
+  SUBSCRIBE: 訂閱
+  MONTHS_OF_THE_YEAR: [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+  DAYS_OF_THE_WEEK: [週一, 週二, 週三, 週四, 週五, 週六, 週日]
+  READ_MORE: 繼續閱讀...
+  RANDOM_ARTICLE: 隨機文章
+  RELATED_POSTS: 相關文章
+  ARCHIVES: 歸檔
+  POPULAR_TAGS: 最熱標籤
+  PUBLISHED_BY: 發布者
+  PREVIOUS: 上一篇
+  NEXT: 下一篇
+  PAGE: 頁
+
+zh-tw:
+  SITE:
+    TITLE: 我的網誌
+    DESCRIPTION: 網誌描述
+    COPYRIGHT: © 版權所有 %s 公司名稱
+  SUBSCRIBE: 訂閱
+  MONTHS_OF_THE_YEAR: [一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+  DAYS_OF_THE_WEEK: [週一, 週二, 週三, 週四, 週五, 週六, 週日]
+  READ_MORE: 繼續閱讀...
+  RANDOM_ARTICLE: 隨機文章
+  RELATED_POSTS: 相關文章
+  ARCHIVES: 歸檔
+  POPULAR_TAGS: 最熱標籤
+  PUBLISHED_BY: 發布者
+  PREVIOUS: 上一篇
+  NEXT: 下一篇
+  PAGE: 頁
+  
