@@ -1,3 +1,9 @@
+# v1.2.0
+## 09/09/2016
+
+1. [](#improved)
+    * Update forms for the newest Form plugin markup. Drop totally custom form markup, extend from forms default twig files
+
 # v1.1.0
 ## 07/14/2016
 
@@ -9,7 +15,7 @@
     * Fix setting the page language in the html tag
     * Fix pagination
     * Fix layout problem on a blog post when the author is not defined
-    
+
 # v1.0.7
 ## 01/06/2016
 
