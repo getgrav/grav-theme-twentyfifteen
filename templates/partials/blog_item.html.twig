@@ -1,3 +1,4 @@
+{% if date(page.date) < date('now') %}
 <article class="post type-post post-excerpt format-standard hentry {% if page.media.images %}has-post-thumbnail{% endif %}">
 
 <div class="post-thumbnail">
@@ -84,7 +85,7 @@
         {% endif %}
     </footer>
 </article>
-
+{% endif %}
 {% if not truncate %}
     {% if config.plugins.comments.enabled %}
         <div id="comments" class="comments-area">
