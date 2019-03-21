@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
     {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
     {% block head %}
@@ -21,17 +21,20 @@
             <link rel='stylesheet' id='twentyfifteen-ie7-css'  href='{{ url('theme://css/ie7.css') }}' type='text/css' media='all' />
             <![endif]-->
         {% endblock %}
-        {{ assets.css() }}
 
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
         {% endblock %}
-        {{ assets.js() }}
 
         {% block color_scheme %}
             {% if theme_config.current_preset and theme_config.current_preset != 'default' %}
                 {% include 'partials/color_scheme.html.twig' %}
             {% endif %}
+        {% endblock %}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
         {% endblock %}
 
     {% endblock %}
@@ -61,7 +64,7 @@
 </div>
 
 {% block javascripts_bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
     <script type='text/javascript'>
     /* <![CDATA[ */
     var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
