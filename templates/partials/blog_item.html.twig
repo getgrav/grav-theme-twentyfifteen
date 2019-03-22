@@ -85,6 +85,19 @@
     </footer>
 </article>
 
+{% if not truncate %}
+    {% if config.plugins.comments.enabled %}
+        <div id="comments" class="comments-area">
+            {% include 'partials/comments.html.twig' %}
+        </div>
+    {% endif %}
+    {% if config.plugins.jscomments.enabled %}
+        <div id="comments" class="comments-area">
+            {{ jscomments()|raw }}
+        </div>
+    {% endif %}
+{% endif %}
+
 {% if show_prev_next %}
 {% if page.nextSibling.media.images %}
 <style type="text/css">
