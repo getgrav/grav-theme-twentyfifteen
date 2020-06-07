@@ -43,7 +43,12 @@
                 </h2>
                 <div class="author-avatar">
                     {% if page.header.avatar %}
-                        {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
+                        {% if "://" in page.header.avatar %}
+                            {% set avatar_image = media[page.header.avatar] %}
+                        {% else %}
+                            {% set avatar_image = page.media.images[page.header.avatar] %}
+                        {% endif %}
+                        {{ avatar_image.cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
                     {% endif %}
                     {% if page.header.author or page.header.author_bio %}
                         <div class="author-description">
@@ -66,7 +71,7 @@
 
     <footer class="entry-footer">
         <span class="posted-on">
-            <time class="entry-date published updated" datetime="{{ page.date|date(config.system.pages.dateformat.short) }}">{{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} {{ page.date|date(config.system.pages.dateformat.default) }}</time> 
+            <time class="entry-date published updated" datetime="{{ page.date|date(config.system.pages.dateformat.short) }}">{{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} {{ page.date|date(config.system.pages.dateformat.default) }}</time>
         </span>
         {% if page.header.author %}
             <span class="byline">
