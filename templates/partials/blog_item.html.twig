@@ -1,7 +1,7 @@
 <article class="post type-post post-excerpt format-standard hentry {% if page.media.images %}has-post-thumbnail{% endif %}">
 
 <div class="post-thumbnail">
-        {{ page.media.images|first.cropZoom(1038,437).html(page.title, page.title, 'attachment-post-thumbnail wp-post-image') }}
+        {{ page.media.images|first.cropZoom(1038,437).html(page.title, page.title, 'attachment-post-thumbnail wp-post-image')|raw }}
 </div>
 
     <header class="entry-header">
@@ -19,18 +19,18 @@
 
     <div class="entry-content">
         {% if page.header.continue_link is sameas(false) %}
-            {{ page.content }}
+            {{ page.content|raw }}
             {% if not truncate %}
             {% set show_prev_next = true %}
             {% endif %}
         {% elseif truncate and page.summary != page.content %}
-           {{ page.summary }}
+           {{ page.summary|raw }}
             <a class="more-link" href="{{ page.url }}">{{ 'READ_MORE'|t }}</a>
         {% elseif truncate %}
-            {{ page.content|truncate(550) }}
+            {{ page.content|truncate(550)|raw }}
             <a class="more-link" href="{{ page.url }}">{{ 'READ_MORE'|t }}</a>
         {% else %}
-            {{ page.content }}
+            {{ page.content|raw }}
             {% set show_prev_next = true %}
         {% endif %}
     </div>
@@ -43,7 +43,7 @@
                 </h2>
                 <div class="author-avatar">
                     {% if page.header.avatar %}
-                        {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56') }}
+                        {{ page.media.images[page.header.avatar].cropZoom(56,56).html(page.header.avatar,page.header.avatar, 'avatar avatar-56')|raw }}
                     {% endif %}
                     {% if page.header.author or page.header.author_bio %}
                         <div class="author-description">
@@ -66,7 +66,7 @@
 
     <footer class="entry-footer">
         <span class="posted-on">
-            <time class="entry-date published updated" datetime="{{ page.date|date(config.system.pages.dateformat.short) }}">{{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} {{ page.date|date(config.system.pages.dateformat.default) }}</time> 
+            <time class="entry-date published updated" datetime="{{ page.date|date(config.system.pages.dateformat.short) }}">{{ 'MONTHS_OF_THE_YEAR'|ta(page.date|date('n') - 1) }} {{ page.date|date(config.system.pages.dateformat.default) }}</time>
         </span>
         {% if page.header.author %}
             <span class="byline">
